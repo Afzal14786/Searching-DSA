@@ -3,7 +3,7 @@ package Codes.BinarySearch.Questions;
 public class LowerBound {
     public static void main(String[] args) {
         int arr[] = {2,4,6,6,9,8,9,11,12,11};
-        int target = 11;
+        int target = 1;
 
         int res = lowerBound(arr, target);
         if(res == -1) {

@@ -34,6 +34,8 @@ class LinerSearch {
         } else {
             System.out.println("Searching element found 🙂 at index-> " + idx);
         }
+
+        scn.close();
 // - - - -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
         /*

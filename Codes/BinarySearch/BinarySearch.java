@@ -33,6 +33,7 @@ class BinarySearch {
     } else {
         System.out.println("Target element found at index no : " + result);
     }
+    scn.close();
     }
 
     // implementation of binary search
