@@ -12,7 +12,7 @@ public class squareRoot {
         System.out.println("Square root of entered number : " + res);
 
         boolean result = Square(res);
-        System.out.println(result);
+        System.out.println("Perfect Square Number : " + result);
         scn.close();
     }
 
