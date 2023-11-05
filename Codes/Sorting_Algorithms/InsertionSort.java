@@ -10,6 +10,7 @@ public class InsertionSort {
 
         // Time Complexity = O(n^2)
         // Space Complextiy = O(1) {Constant}
+        
         System.out.println("Sorted (Insertion) Array is");
         System.out.println(Arrays.toString(array));
     }
@@ -17,18 +18,32 @@ public class InsertionSort {
     private static void insertion(int[] arr) {
         // Insertion Sort //
 
-        for (int i = 0; i < arr.length; i++) {
-            int j = i;
-            while (j > 0 && arr[j] < arr[j-1]) {
-                // swaping using XOR Operator //
-                // arr[j] = arr[j] ^ arr[j-1];
-                // arr[j-1] = arr[j] ^ arr[j-1];
-                // arr[j] = arr[j] ^ arr[j-1];
+        // for (int i = 0; i < arr.length; i++) {
+        //     int j = i;
+        //     while (j > 0 && arr[j] < arr[j-1]) {
+        //         // swaping using XOR Operator //
+        //         // arr[j] = arr[j] ^ arr[j-1];
+        //         // arr[j-1] = arr[j] ^ arr[j-1];
+        //         // arr[j] = arr[j] ^ arr[j-1];
 
-                // Swaping using temp variable //
-                int temp = arr[j];
-                arr[j] = arr[j-1];
-                arr[j-1] = temp;
+        //         // Swaping using temp variable //
+        //         int temp = arr[j];
+        //         arr[j] = arr[j-1];
+        //         arr[j-1] = temp;
+        //         j--;
+        //     }
+        // }
+
+        for (int i = 1; i < arr.length; i++) {
+            int j = i;
+            while(j > 0 && arr[j] < arr[j-1]) {
+                // swaping the numbers //
+                /*
+                 * XOR Swaping
+                 */
+                arr[j] = arr[j] ^ arr[j-1];
+                arr[j-1] = arr[j] ^ arr[j-1];
+                arr[j] = arr[j] ^ arr[j-1];
                 j--;
             }
         }
